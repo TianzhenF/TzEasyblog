@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>123 - 我是程序员</title>
-        <meta name="keywords" content="技术">
-        <meta name="description" content="111">
+    <title>github代码推送 - 我是程序员</title>
+        <meta name="keywords" content="github">
+        <meta name="description" content="github代码推送命令">
 
     <link rel="stylesheet" href="../resource/static/plugin/highlight/styles/github.min.css">
     <link rel="stylesheet" href="../resource/static/plugin/viewer/viewer.min.css">
@@ -162,16 +162,47 @@
         <div class="container">
             <div class="container-content">
                 <div>
-                    <div class="blog-title">123</div>
+                    <div class="blog-title">github代码推送</div>
                     <div class="blog-info">
-                        <div class="time">2023-01-05 12:04:48</div>
+                        <div class="time">2023-01-11 06:16:11</div>
                         <div class="nick-name">作者：<a href="../user.html#100002">程序员天真</a></div>
                         <div class="category">分类专栏：
-                                <a href="../category/10027.html">EasyBlog</a>
+                                <a href="../category/10056.html">GitHub</a>
                         </div>
+                            <div class="reprint-url">转载：<a href="https://blog.csdn.net/qq_38406029/article/details/121044008" target="_blank">查看原文</a></div>
 
                     </div>
-                    <div class="content" id="content"><p>123123123</p><p>```java</p><p>public</p><p>```</p></div>
+                    <div class="content" id="content"><p data-v-md-line="1">原文链接：https://blog.csdn.net/qq_38406029/article/details/121044008</p>
+<h1 data-v-md-heading="_1-git简介" data-v-md-line="2">1.git简介</h1>
+<p data-v-md-line="3">git是一个集版本控制，内容管理，工作管理一身的系统，可以通过它对一个大项目进行多人开发，并对不同终端的代码块进行整合。</p>
+<h1 data-v-md-heading="_2-git图解" data-v-md-line="5">2.git图解</h1>
+<p data-v-md-line="6">git可以分为四个工作区分别是</p>
+<div data-v-md-line="7"><div class="v-md-pre-wrapper v-md-pre-wrapper- extra-class"><pre class="v-md-hljs-"><code>工作区(Workspace)：本地项目的代码编程工作区
+暂存区(Stage)：已完成的工作临时存放区域，等待被提交，一般存放在.git/index文件中
+本地仓库(Repository)：本地存放数据的区域，存放数据的位置为.git目录
+远程仓库(Remote)：github的线上的远程仓库
+</code></pre>
+</div></div><p data-v-md-line="13"><img src="../resource/image/202301/kYtakdROOeFhVquDXqWVTvliTTUqTF.png" alt="图片"></p>
+<h1 data-v-md-heading="_3-github代码首次推送" data-v-md-line="15">3.github代码首次推送</h1>
+<h2 data-v-md-heading="github代码推送可以分为以下几个步骤" data-v-md-line="16">github代码推送可以分为以下几个步骤：</h2>
+<p data-v-md-line="19">在github中创建一个新的仓库</p>
+<div data-v-md-line="20"><div class="v-md-pre-wrapper v-md-pre-wrapper- extra-class"><pre class="v-md-hljs-"><code>git init
+git add .
+git commit -m “Repo_name”
+git remote add origin git@github.com:guidao20/MJSMA_JSMA.git
+git push -u origin master
+</code></pre>
+</div></div><h1 data-v-md-heading="_4-github代码更新同步" data-v-md-line="27">4.github代码更新同步</h1>
+<h2 data-v-md-heading="github代码更新同步可以分为以下几个步骤" data-v-md-line="28">github代码更新同步可以分为以下几个步骤：</h2>
+<div data-v-md-line="29"><div class="v-md-pre-wrapper v-md-pre-wrapper- extra-class"><pre class="v-md-hljs-"><code>git status (查看当前状态)
+git pull origin master (拉取当前最新分支)
+git add . (更新全部)
+git commit -m “introduction” (更新说明)
+git push origin master (代码推送)
+</code></pre>
+</div></div><p data-v-md-line="36">————————————————<br>
+原文链接：https://blog.csdn.net/qq_38406029/article/details/121044008</p>
+</div>
                 </div>
             </div>
         </div>

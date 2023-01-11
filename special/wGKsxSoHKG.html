@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>123 - 我是程序员</title>
-        <meta name="keywords" content="技术">
-        <meta name="description" content="111">
+    <title>算法练习 - 1.两数之和 - 我是程序员</title>
+        <meta name="keywords" content="1.两数之和">
+        <meta name="description" content="来源：力扣（LeetCode）链接：https://leetcode.cn/problems/two-sum1.两数之和给定一个整数数组nums 和一个整数目标值target，请你在该数组中找出和为目标值target 的那 两个 整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。你可以按任意顺序返回答案。示例1：输入：nums=[2,7,11,15],target=9输出：[0,1]解释：因为nums[0]+nums[1]==9，返回[0,1]。示例2：输入：nums=[3,2,4],target=6输出：[1,2]示例3：输入：num">
 
     <link rel="stylesheet" href="../resource/static/plugin/highlight/styles/github.min.css">
     <link rel="stylesheet" href="../resource/static/plugin/viewer/viewer.min.css">
@@ -12,7 +12,7 @@
     <script src="../resource/static/plugin/jquery/jquery.min.js"></script>
     <script src="../resource/static/plugin/viewer/viewer-jquery.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <link rel="stylesheet" href="../resource/static/css/blog.detail.css">
+    <link rel="stylesheet" href="../resource/static/css/special.detail.css">
     <script>
         $(document).ready(function (e) {
             createToc();
@@ -50,6 +50,10 @@
                     $("#toc").show();
                 }
             });
+
+            let currentUrl = document.location.href;
+            currentUrl = currentUrl.substring(currentUrl.lastIndexOf("/") + 1, currentUrl.lastIndexOf("."));
+            $("#" + currentUrl).addClass("active");
         });
 
         const createToc = () => {
@@ -95,7 +99,7 @@
             if (data.children.length > 0) {
                 $("<span class='icon-arrow arrow-down'></span>").appendTo(titleNode);
             }
-            $("<a href='#" + data.id + "' title='" + data.name + "'>" + data.name + "</a>").appendTo(titleNode);
+            $("<a href='#" + data.id + "'  title='" + data.name + "'>" + data.name + "</a>").appendTo(titleNode);
 
             if (data.children.length > 0) {
                 let subNode = $("<div class='sub-title'></div>").appendTo(currentNode);
@@ -150,57 +154,97 @@
             <div class="logo">
                     <a href="../index.html">我是程序员</a>
             </div>
-                <a href="../index.html" class="nav active">博客</a>
+                <a href="../index.html" class="nav ">博客</a>
                 <a href="../category.html" class="nav ">分类专栏</a>
-                <a href="../special.html" class="nav ">专题</a>
+                <a href="../special.html" class="nav active">专题</a>
                 <a href="../user.html" class="nav ">成员</a>
                 <a href="../comment.html" class="nav ">留言板</a>
         </div>
     </div>
 <div class="body-container">
     <div class="blog-detail">
+        <div class="blog-special-list">
+            <div class="blog-special">
+                <div class="category-image">
+                        <img src="../resource/static/default_img.png">
+                </div>
+                <div class="category-info">
+                    <div class="category-title" title="算法练习">算法练习</div>
+                    <div class="blog-count">文章数：1</div>
+                </div>
+            </div>
+            <div class="category-desc" title="练习算法">简介：练习算法</div>
+            <div class="blog-list toc">
+        <div>
+            <div class="title" style="padding-left:26px" id="wGKsxSoHKG">
+                <a href="wGKsxSoHKG.html" title="1.两数之和">1.两数之和</a>
+            </div>
+        </div>
+            </div>
+
+        </div>
         <div class="container">
             <div class="container-content">
                 <div>
-                    <div class="blog-title">123</div>
+                    <div class="blog-title">1.两数之和</div>
                     <div class="blog-info">
-                        <div class="time">2023-01-05 12:04:48</div>
+                        <div class="time">2023-01-11 06:35:12</div>
                         <div class="nick-name">作者：<a href="../user.html#100002">程序员天真</a></div>
-                        <div class="category">分类专栏：
-                                <a href="../category/10027.html">EasyBlog</a>
-                        </div>
-
                     </div>
-                    <div class="content" id="content"><p>123123123</p><p>```java</p><p>public</p><p>```</p></div>
+                    <div class="content" id="content"><p data-v-md-line="2">来源：力扣（LeetCode）<br>
+链接：<a href="https://leetcode.cn/problems/two-sum" target="_blank">https://leetcode.cn/problems/two-sum</a></p>
+<h1 data-v-md-heading="_1-两数之和" data-v-md-line="4">1.两数之和</h1>
+<p data-v-md-line="5"><strong>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</strong></p>
+<p data-v-md-line="7"><strong>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</strong></p>
+<p data-v-md-line="9"><strong>你可以按任意顺序返回答案。</strong></p>
+<h3 data-v-md-heading="示例-1" data-v-md-line="11">示例 1：</h3>
+<blockquote data-v-md-line="13">
+<p data-v-md-line="13">输入：nums = [2,7,11,15], target = 9<br>
+输出：[0,1]<br>
+解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。</p>
+</blockquote>
+<h3 data-v-md-heading="示例-2" data-v-md-line="17">示例 2：</h3>
+<blockquote data-v-md-line="19">
+<p data-v-md-line="19">输入：nums = [3,2,4], target = 6<br>
+输出：[1,2]</p>
+</blockquote>
+<h3 data-v-md-heading="示例-3" data-v-md-line="22">示例 3：</h3>
+<blockquote data-v-md-line="24">
+<p data-v-md-line="24">输入：nums = [3,3], target = 6<br>
+输出：[0,1]</p>
+</blockquote>
+<h3 data-v-md-heading="提示" data-v-md-line="28">提示：</h3>
+<blockquote data-v-md-line="30">
+<p data-v-md-line="30">2 &lt;= nums.length &lt;= 104<br>
+-109 &lt;= nums[i] &lt;= 109<br>
+-109 &lt;= target &lt;= 109<br>
+只会存在一个有效答案</p>
+</blockquote>
+<h2 data-v-md-heading="代码段" data-v-md-line="36">代码段</h2>
+<p data-v-md-line="37">暴力枚举</p>
+<div data-v-md-line="38"><div class="v-md-pre-wrapper v-md-pre-wrapper- extra-class"><pre class="v-md-hljs-"><code>var twoSum = function(nums, target) {    //nums是数组,target是总和数
+   const arr = [];    //空数组
+   for(i=0;i&lt;nums.length-1;i++){    //从0开始循环nums.length-1次
+       for(j=i+1;j&lt;nums.length;j++){    //从i+1(第二个数)开始循环一次
+           if(nums[i]+nums[j]==target){    //判断数组中的数两两相加是否等于总和数
+               arr.push(i);    //推下标i到arr数组后
+               arr.push(j);    //推下标j到arr数组后
+           }
+       }
+   }
+   return arr;   //返回arr数组[i,j]
+};
+</code></pre>
+</div></div></div>
                 </div>
             </div>
-        </div>
-        <div class="right">
-            <div class="container" id="right-container">
-                <div class="right-title toc-title">目录结构</div>
-                <div id="toc"></div>
-
-                <div class="right-title category-title">
-                    <span>分类专栏</span>
-                    <a href="../category.html" class="more">更多>></a>
-                </div>
-                    <a href="../category/10027.html" class="category-item">
-                        <span class="category-icon">
-                                <img src="../resource/image/202301/dQKryfJRfmVzhHYKIFarbaRBPSKMtQ.jpg">
-                        </span>
-                        <span class="category-name" title="EasyBlog">EasyBlog</span>
-                        <span class="blog-count">2篇</span>
-                    </a>
-                    <a href="../category/10056.html" class="category-item">
-                        <span class="category-icon">
-                                <img src="../resource/static/default_img.png">
-                        </span>
-                        <span class="category-name" title="GitHub">GitHub</span>
-                        <span class="blog-count">1篇</span>
-                    </a>
+            <div id="right-container">
+                <div class="toc-title" id="toc-title">目录<span class="icon-arrow arrow-down"></span></div>
+                <div id="toc" class="toc"></div>
             </div>
         </div>
     </div>
+
 </div>
         <div class="footer">
             <div>
